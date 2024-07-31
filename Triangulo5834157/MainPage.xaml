@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Triangulo5834157.Model"
+             x:Class="Triangulo5834157.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewmodel:Area/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+            Text="Calcular area de un triangulo"
+            FontAttributes="Bold"
+            FontFamily="New Roman"
+            FontSize="30"
+            TextColor="AliceBlue"
+            VerticalTextAlignment="Center"
+            HorizontalOptions="Center"/>
+            <Label
+            Text="Ingrese el LADO1"
+            FontSize="15"
+            FontFamily="New Roman"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"/>
+
+            <Entry
+            Text="{Binding N1}"
+           WidthRequest="300"
+            Placeholder="Lado1"
+            PlaceholderColor="Aqua"/>
+
+            <Label
+     Text="Ingrese el LADO2"
+     FontSize="15"
+     FontFamily="New Roman"
+     VerticalOptions="Center"
+     HorizontalOptions="Center"/>
+
+            <Entry
+     Text="{Binding N2}"
+     Placeholder="Lado2"
+     PlaceholderColor="Aqua"
+     WidthRequest="300"/>
+
+            <Label
+     Text="Ingrese el LADO3"
+     FontSize="15"
+     FontFamily="New Roman"
+     VerticalOptions="Center"
+     HorizontalOptions="Center"/>
+
+            <Entry
+     Text="{Binding N3}"
+     Placeholder="Lado3"
+     PlaceholderColor="Aqua"
+     WidthRequest="300"/>
+
+            <Label
+            Text="El resultado del triangulo es:"
+            FontFamily="arial black"
+            FontSize="15"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"/>
+
+            <Entry
+            Text="{Binding Resultado}"
+            WidthRequest="400"/>
+
+            <Button
+            BackgroundColor="Cyan"
+            TextColor="Black"
+            Text="Obtener Area"
+            x:Name="Area"
+            WidthRequest="300"
+            Command="{Binding areaCommand}"/>
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
